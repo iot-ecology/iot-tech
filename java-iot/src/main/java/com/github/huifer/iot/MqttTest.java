@@ -10,6 +10,8 @@ public class MqttTest {
         String clientId = "kjljl";
         MqttClient client = new MqttClient(broker, clientId);
         MqttConnectOptions options = new MqttConnectOptions();
+        options.setUserName("admin");
+        options.setPassword("admin123".toCharArray());
         client.connect(options);
 
 
